@@ -3,10 +3,10 @@
 // Parent[tree[i]] -> tree[i >> 1]
 // Children[tree[i]] -> tree[i << 1] && tree[(i << 1) + 1]
 template<typename T>
-struct SegmentTree {
+struct SegTree {
     int N = 1;
     vector<T> tree;
-    SegmentTree(const vector<T>& v) {
+    SegTree(const vector<T>& v) {
         while (N < v.size()) N <<= 1;
         // Default value 0
         tree.resize(N << 1, 0);
