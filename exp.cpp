@@ -1,4 +1,5 @@
 // Binary Modular Exponentiation
+// mod > 0
 template<typename T>
 T binModExp(T base, T exp, T mod) {
     T ans = 1;
