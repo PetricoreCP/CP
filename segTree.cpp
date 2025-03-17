@@ -1,5 +1,5 @@
 // Binary Tree: Segment Tree
-// Range Query && Update Value -> O(log2(N))
+// Range Query && Value Update -> O(log2(N))
 // Parent[tree[i]] -> tree[i >> 1]
 // Children[tree[i]] -> tree[i << 1] && tree[(i << 1) + 1]
 template<typename T>
