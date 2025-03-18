@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 // Binary Indexed Tree: Fenwick Tree
 // Range Sum Queries && Point Add/Update
 // 1-Indexed
@@ -31,6 +28,7 @@ struct BIT {
         T delta = x - query(i, i);
         pointAdd(i, delta);
     }
+    // prefix: [0, i]
     T prefix(int i) {
         T res = 0;
         while(i > 0) {
@@ -39,9 +37,11 @@ struct BIT {
         }
         return res;
     }
+    // query: [l, r]
     T query(int l, int r) {
         return prefix(r) - prefix(l - 1);
     }
+    // lowerBound: i: tree[i] >= x
     int lowerBound(T x) {
         int curr = 0; 
         T tot = 0;
@@ -55,9 +55,3 @@ struct BIT {
         return curr + 1;
     }
 };
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    return 0;
-}
